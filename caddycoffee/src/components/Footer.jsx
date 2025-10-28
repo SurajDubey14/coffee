@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#4b2e05] text-white py-10 mt-16">
+    <footer className="bg-[#4b2e05] text-white py-10">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-3 gap-8">
         {/* Brand Section */}
         <div>
@@ -29,9 +29,9 @@ export default function Footer() {
         {/* Contact Info */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Contact</h3>
-          <p className="text-gray-200">📍 12, Cafe Street, Delhi NCR</p>
-          <p className="text-gray-200">📞 +91 9876543210</p>
-          <p className="text-gray-200">📧 hello@beanandbite.com</p>
+          <p className="text-gray-200">📍 12, Food Market , Sector-110, Noida</p>
+          <p className="text-gray-200">📞 +91 9310745399</p>
+          <p className="text-gray-200">📧 caddycoffee01@gmail.com</p>
         </div>
       </div>
 
