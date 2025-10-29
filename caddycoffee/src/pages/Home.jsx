@@ -6,12 +6,36 @@ import sandwich from "../assets/images/sandwich.png";
 import sandwiches from "../assets/images/sandwich.jpg";
 import momos from "../assets/images/momos.png";
 import momo from "../assets/images/momos.jpg";
+import blog1 from "../assets/images/blog-cold-coffee.jpg";
+import blog2 from "../assets/images/blog-sandwich.jpg";
+import blog3 from "../assets/images/blog-momos.jpg";
 
 const categories = [
   { title: "Cold Coffee", img: coldCoffee },
   { title: "Hot Coffee", img: hotCoffee },
   { title: "Sandwiches", img: sandwich },
   { title: "Momos", img: momos },
+];
+
+const blogs = [
+  {
+    title: "The Secret Behind Our Perfect Cold Coffee",
+    desc: "Smooth, creamy, and crafted with love — discover what makes our cold coffee the ultimate chill-out drink.",
+    img: blog1,
+    date: "October 2025",
+  },
+  {
+    title: "From Griddle to Grill: How We Craft the Perfect Sandwich",
+    desc: "Our sandwiches are all about crunch, melt, and magic. Here’s a peek into how we make them irresistible.",
+    img: blog2,
+    date: "October 2025",
+  },
+  {
+    title: "Street-Style Momos, Café Vibes",
+    desc: "Momos that melt in your mouth — steamed, fried, or tandoori. Dive into our café twist on this street favorite.",
+    img: blog3,
+    date: "October 2025",
+  },
 ];
 
 const Home = () => {
@@ -155,6 +179,44 @@ const Home = () => {
               Grilled Sandwich
             </h3>
             <p className="text-[#5c3d12] mt-2">₹129</p>
+          </div>
+        </div>
+      </section>
+
+      {/* caddycoffe blogs bg-[#fffaf5]*/}
+      <section className="py-4 md:pt-20 bg-white ">
+        <div className="md:relative text-center">
+          <h2 className="text-4xl font-bold text-[#4b2e05] pb-10 md:pb-28">
+            From the Caddy Coffee Blog 📝
+          </h2>
+
+          <div className="md:block hidden bg-[#fbeddf] md:py-40"></div>
+
+          <div className="md:absolute md:top-16 w-full ">
+            <div className="px-6 grid gap-8 max-w-6xl mx-auto md:grid-cols-3">
+              {blogs.map((blog, index) => (
+                <div
+                  key={index}
+                  className=" bg-white shadow-sm overflow-hidden p-4"
+                >
+                  <img
+                    src={blog.img}
+                    alt={blog.title}
+                    className="w-full h-44 object-cover"
+                  />
+                  <div className="p-2 text-left">
+                    <p className="text-xs text-[#8b6b33] mb-2">{blog.date}</p>
+                    <h3 className="text-sm font-semibold text-[#4b2e05] mb-2">
+                      {blog.title}
+                    </h3>
+                    <p className="text-[#5c3d12] mb-4 text-xs">{blog.desc}</p>
+                    <button className="text-[#4b2e05] text-xs font-medium hover:underline">
+                      Read More →
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
