@@ -6,13 +6,13 @@ export default function Navbar() {
     <nav className="bg-[#fffaf5] shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center justify-center space-x-2">
           <img
             src="/favicon.png"
             alt="Coffee Logo"
-            className="w-10 h-10 rounded-full"
+            className="w-7 md:w-10 h-7 md:h-10 rounded-full"
           />
-          <span className="text-2xl font-bold text-[#4b2e05]">Caddy Coffee</span>
+          <span className="text-sm md:text-2xl font-bold text-[#4b2e05]">Caddy Coffee</span>
         </Link>
 
         {/* Nav Links */}
@@ -46,7 +46,7 @@ export default function Navbar() {
         {/* CTA Button */}
         <Link
           to="/order"
-          className="bg-[#4b2e05] text-white px-4 py-2 rounded-full hover:bg-[#3a2304] transition"
+          className="bg-[#4b2e05] text-white px-4 text-sm md:text-md py-1 md:py-2 rounded-full hover:bg-[#3a2304] transition"
         >
           Order Now
         </Link>
